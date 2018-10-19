@@ -117,7 +117,7 @@ var defaults = []struct {
 		opt:      DefaultEnableRelay,
 	},
 	{
-		fallback: func(cfg *Config) bool { return !cfg.PingCustom },
+		fallback: func(cfg *Config) bool { return cfg.Ping == nil },
 		opt:      DefaultEnablePing,
 	},
 }
